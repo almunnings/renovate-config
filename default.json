@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "config:base",
+    ":preserveSemverRanges",
+    ":disableRateLimiting",
+    ":rebaseStalePrs",
+    "github>almunnings/renovate-config:tools",
+    "github>almunnings/renovate-config:symfony",
+    "github>almunnings/renovate-config:drupal",
+    "github>almunnings/renovate-config:wordpress",
+    "github>almunnings/renovate-config:laravel"
+  ],
+  "baseBranches": ["staging"],
+  "enabledManagers": ["composer", "dockerfile", "docker-compose"],
+  "ignorePaths": ["**/web/**", "**/docroot/**"],
+  "dependencyDashboard": false,
+  "separateMajorMinor": true,
+  "separateMinorPatch": true,
+  "separateMultipleMajor": false,
+  "pinVersions": false,
+  "prHourlyLimit": 0,
+  "dockerfile": {
+    "fileMatch": [
+      "^lagoon/[^/]*\\.dockerfile$",
+      "^\\.docker/[^/]*\\.dockerfile$"
+    ]
+  }
+}

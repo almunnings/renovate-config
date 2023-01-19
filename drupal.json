@@ -1,0 +1,49 @@
+{
+  "packageRules": [
+    {
+      "matchLanguages": ["php"],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "updateTypes": ["patch", "minor"],
+      "matchPackagePrefixes": ["drupal/"],
+      "excludePackageNames": [
+        "drupal/core-composer-scaffold",
+        "drupal/core-dev",
+        "drupal/core-dev-pinned",
+        "drupal/core-project-message",
+        "drupal/core-recommended",
+        "drupal/core-vendor-hardening",
+        "drupal/drupal"
+      ],
+      "groupName": "Drupal modules",
+      "labels": ["drupal", "drupal-module"]
+    },
+    {
+      "updateTypes": ["patch", "minor"],
+      "packageNames": [
+        "drupal/core-composer-scaffold",
+        "drupal/core-dev",
+        "drupal/core-dev-pinned",
+        "drupal/core-project-message",
+        "drupal/core-recommended",
+        "drupal/core-vendor-hardening"
+      ],
+      "groupName": "Drupal Core",
+      "labels": ["drupal", "drupal-core"]
+    },
+    {
+      "updateTypes": ["major"],
+      "packageNames": [
+        "drupal/core-composer-scaffold",
+        "drupal/core-dev",
+        "drupal/core-dev-pinned",
+        "drupal/core-project-message",
+        "drupal/core-recommended",
+        "drupal/core-vendor-hardening"
+      ],
+      "groupName": "Drupal Core",
+      "labels": ["drupal", "drupal-core", "major"]
+    }
+  ]
+}

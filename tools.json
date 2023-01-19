@@ -1,0 +1,21 @@
+{
+  "packageRules": [
+    {
+      "matchLanguages": ["php"],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "datasources": ["packagist"],
+      "packageNames": [
+        "amazeeio/drupal_integrations",
+        "composer/installers",
+        "cweagans/composer-patches",
+        "dealerdirect/phpcodesniffer-composer-installer",
+        "oomphinc/composer-installers-extender"
+      ],
+      "updateTypes": ["patch", "minor"],
+      "groupName": "Tools",
+      "labels": ["tools"]
+    }
+  ]
+}

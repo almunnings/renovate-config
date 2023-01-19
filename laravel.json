@@ -1,0 +1,17 @@
+{
+  "packageRules": [
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["patch", "minor"],
+      "matchPackagePrefixes": ["laravel/"],
+      "groupName": "Laravel",
+      "labels": ["laravel"]
+    },
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["major"],
+      "matchPackagePrefixes": ["laravel/"],
+      "enabled": false
+    }
+  ]
+}

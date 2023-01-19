@@ -1,0 +1,46 @@
+{
+  "packageRules": [
+    {
+      "matchLanguages": ["php"],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "matchPackagePrefixes": ["wpackagist-plugin/"],
+      "updateTypes": ["patch", "minor"],
+      "groupName": "Wordpress plugins",
+      "labels": ["wordpress", "wordpress-plugin"]
+    },
+    {
+      "matchPackagePrefixes": ["wpackagist-theme/"],
+      "updateTypes": ["patch", "minor"],
+      "groupName": "Wordpress themes",
+      "labels": ["wordpress", "wordpress-theme"]
+    },
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["patch", "minor"],
+      "packageNames": [
+        "roots/wordpress",
+        "roots/wp-config",
+        "roots/wp-password-bcrypt",
+        "roots/bedrock-autoloader",
+        "roots/bedrock-disallow-indexing"
+      ],
+      "groupName": "WordPress Core",
+      "labels": ["wordpress", "wordpress-core"]
+    },
+    {
+      "datasources": ["packagist"],
+      "updateTypes": ["major"],
+      "packageNames": [
+        "roots/wordpress",
+        "roots/wp-config",
+        "roots/wp-password-bcrypt",
+        "roots/bedrock-autoloader",
+        "roots/bedrock-disallow-indexing"
+      ],
+      "groupName": "WordPress Core",
+      "labels": ["wordpress", "wordpress-core", "major"]
+    }
+  ]
+}
